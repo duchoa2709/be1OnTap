@@ -18,9 +18,17 @@ $per_page = $limit; // Đặt số lượng sản phẩm trên mỗi trang bằn
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page > 1) ? ($page - 1) * $limit : 0;
 
+// lấy sản phẩm theo phân trang
 $getProductsList = $Product->pagination($limit, $start);
 $countProducts = count($getAllProducts);
 $total_page = ceil($countProducts / $limit);
+
+// xóa sản phẩm
+if (isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $Product->deleteProduct($id);
+    header('Location: index.php');
+}
 
 ?>
 
@@ -131,12 +139,13 @@ $total_page = ceil($countProducts / $limit);
                 </p>
             </td>
             <!-- action -->
-            <form action="" method="POST">
-                <td>
-                    <a href="edit.php?id=<?php echo $product['id'] ?>" class="btn btn-success btn-mini">Edit</a>
-                    <a href="delete.php?id=<?php echo $product['id'] ?>" class="btn btn-danger btn-mini">Delete</a>
-                </td>
-            </form>
+            <td>
+                <a href="edit.php?id=<?php echo $product['id'] ?>">Edit</a>
+                <form action="  " method="post">
+                    <input type="hidden" name="id" value="<?php echo $product['id'] ?>">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
             <!-- Add other columns as needed -->
         </tr>
         <?php endforeach; ?>

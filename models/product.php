@@ -31,6 +31,14 @@ class Product extends Db{
         return $sql->execute();
     }
 
+    // delete product
+    function deleteProduct($id)
+    {
+        $sql = self::$connection->prepare("DELETE FROM products WHERE id = ?");
+        $sql->bind_param("i", $id);
+        return $sql->execute();
+    }
+
     // tìm kiếm không phân trang
     function searchProducts($keyword) {
         $sql = self::$connection->prepare("SELECT * FROM products WHERE name LIKE ?");
