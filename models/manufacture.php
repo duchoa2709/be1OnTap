@@ -23,5 +23,5 @@ class Manufacture extends Db{
         $stmt->bind_param("ssi", $name, $image, $manu_id);
         $stmt->execute();
     }
-    
 }
+?>
