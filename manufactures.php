@@ -74,11 +74,3 @@ $getAllManu = $Manufacture->getAllManu();
         <?php endforeach; ?>
     </tbody>
 </table>
-<div class="row" style="margin-left: 18px;">
-    <ul class="pagination">
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-</div>
-<!-- END CONTENT -->

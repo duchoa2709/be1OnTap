@@ -28,7 +28,7 @@ $total_page = ceil($countProducts / $limit);
 <!--start-top-serch-->
 <div id="search">
     <form action="result.php" method="get">
-        <input type="text" placeholder="Search here..." name="keyword" />
+        <input type="text" placeholder="Search here..." name="keyword" value="<?php echo $_GET['keyword'] ?>" />
         <button type="submit" class="tip-bottom" title="Search">+</button>
     </form>
 </div>

@@ -5,7 +5,6 @@ require_once './models/manufacture.php';
 require_once './models/protype.php';
 require_once './models/product.php';
 
-
 $Manufactures = new Manufacture();
 $Protypes = new Protype();
 $Product = new Product();

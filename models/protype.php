@@ -31,3 +31,4 @@ class Protype extends Db{
         $stmt->execute(); 
     }
 }
+?>

@@ -60,7 +60,7 @@ if (isset($_POST['name'], $_POST['manu_id'], $_POST['type_id'], $_POST['descript
     THÊM PRODUCT
 </h1>
 <!-- BEGIN USER FORM -->
-<form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
     <div class="control-group">
         <label class="control-label">Name :</label>
         <div class="controls">
@@ -125,6 +125,3 @@ if (isset($_POST['name'], $_POST['manu_id'], $_POST['type_id'], $_POST['descript
         </div>
     </div>
 </form>
-<!-- END USER FORM -->
-
-<!-- END CONTENT -->

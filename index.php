@@ -36,7 +36,7 @@ $total_page = ceil($countProducts / $limit);
 <div id="search">
     <form action="result.php" method="get">
         <input type="text" placeholder="Search here..." name="keyword" />
-        <button type="submit" class="tip-bottom" title="Search">+</button>
+        <button type="submit">+</button>
     </form>
 </div>
 <!--close-top-serch-->
