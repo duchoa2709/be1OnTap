@@ -79,7 +79,9 @@ $total_page = ceil($countProducts / $limit);
         <?php foreach ($getProductsList as $product): ?>
         <tr>
             <!-- img -->
-            <td><img src="./images/<?php echo $product['pro_image'] ?>" alt=""></td>
+            <td>
+                <img src="./images/<?php echo $product['pro_image'] ?>" style="width: 100px; height: 100px;">
+            </td>
             <!-- name -->
             <td>
                 <p class="product-name">
